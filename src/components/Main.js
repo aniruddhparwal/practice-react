@@ -1,12 +1,20 @@
 import React from "react"
 // import Maps from "./Maps"
 import LocationLoad from "./LocationLoad"
+import ReviwArena from "./ReviewArena"
 const App = () => {
     return (
-        <div>
-            <h1>ani</h1>
-            <LocationLoad></LocationLoad>
+        <div className="container main">
+            <div className="row">
+                <div className="col maps">
+                    <LocationLoad></LocationLoad>
+                </div>
+                <div className="col reviewArena">
+                    <ReviwArena></ReviwArena>
+                </div>
+            </div>
         </div>
+
     );
 };
 

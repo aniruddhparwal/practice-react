@@ -22,7 +22,7 @@ const LocationLoad = () => {
         console.log("Main component rendered");
     }, []);
     return (
-        <div>
+        <div className="locationLoad">
             <Context.Provider
                 value={{
                     lati: lati,

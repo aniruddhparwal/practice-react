@@ -5,9 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background-color: blue;
+} 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.reviewArena{
+  height: 10vh;
+  padding: 20px;
+  background-color: brown;
+  width: 50vh;
+  display: inline;
+}
+.maps .locationLoad{
+  background-color: cornflowerblue;
+  display: inline;
+  /* position: relative; */
+  height: 70vh;
+  width: 70vh;
+}
+
+.main {
+  margin: 20px;
+  padding: 10px;
+
+
 }

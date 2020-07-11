@@ -30,7 +30,7 @@ import Context from "../Context";
 
 
 const Maps = (props) => {
-    const { lati } = useContext(Context);
+    // const { lati } = useContext(Context);
 
     useEffect(() => {
         //apiCall();
@@ -40,18 +40,24 @@ const Maps = (props) => {
 
 
     return (
-        <Map google={props.google} zoom={14} initialCenter={{
-            lat: "40.854885",
-            lng: "-88.081855"
-        }}>
+        <div className="">
+            <Map google={props.google} zoom={14} initialCenter={{
+                lat: "40.854885",
+                lng: "-88.081855"
 
-            <Marker
-                title={'Your Location'}
-                name={'SOMA'}
-                position={{ lat: 40.854885, lng: -88.081807 }} />
-
-
-        </Map >
+            }}
+                style={{
+                    // position: 'relative',
+                    // width: '50%',
+                    // pading: '10 %',
+                    // height: '50%'
+                }}>
+                <Marker
+                    title={'Your Location'}
+                    name={'SOMA'}
+                    position={{ lat: 40.854885, lng: -88.081807 }} />
+            </Map >
+        </div >
     )
 }
 
