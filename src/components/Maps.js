@@ -40,24 +40,22 @@ const Maps = (props) => {
 
 
     return (
-        <div className="">
-            <Map google={props.google} zoom={14} initialCenter={{
-                lat: "40.854885",
-                lng: "-88.081855"
+        <Map google={props.google} zoom={14} initialCenter={{
+            lat: "40.854885",
+            lng: "-88.081855"
 
-            }}
-                style={{
-                    // position: 'relative',
-                    // width: '50%',
-                    // pading: '10 %',
-                    // height: '50%'
-                }}>
-                <Marker
-                    title={'Your Location'}
-                    name={'SOMA'}
-                    position={{ lat: 40.854885, lng: -88.081807 }} />
-            </Map >
-        </div >
+        }}
+            style={{
+                position: 'relative',
+                width: '100%',
+                padding: '50%',
+                height: '100%'
+            }}>
+            <Marker
+                title={'Your Location'}
+                name={'SOMA'}
+                position={{ lat: 40.854885, lng: -88.081807 }} />
+        </Map >
     )
 }
 

@@ -14,23 +14,32 @@ code {
 }
 
 .reviewArena{
-  height: 10vh;
-  padding: 20px;
+  height: 60vh;
+  margin: 20px;
   background-color: brown;
-  width: 50vh;
-  display: inline;
+  /* width: 100vh; */
+  /* display: inline; */
 }
-.maps .locationLoad{
+ .locationLoad{
   background-color: cornflowerblue;
-  display: inline;
+  /* display: inline; */
   /* position: relative; */
-  height: 70vh;
-  width: 70vh;
+  height: 100%;
+  /* width: 70vh; */
+}
+
+.maps{
+  background-color: darkmagenta;
+  height: 100%;
 }
 
 .main {
   margin: 20px;
   padding: 10px;
+  height:500px;
+  background-color: darkgreen;
+}
 
-
+.col{
+  margin: 20px;
 }
