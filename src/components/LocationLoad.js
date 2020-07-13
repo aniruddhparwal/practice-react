@@ -22,14 +22,15 @@ const LocationLoad = () => {
         console.log("Main component rendered");
     }, []);
     return (
-        <div className="locationLoad">
+        <div>
             <Context.Provider
                 value={{
                     lati: lati,
                     lon: lon,
                 }}
-            ></Context.Provider>
-            <Maps></Maps>
+            >
+                <Maps></Maps>
+            </Context.Provider>
         </div>
     )
 }

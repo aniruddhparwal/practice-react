@@ -1,45 +1,53 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
   background-color: blue;
 } 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.reviewArena{
-  height: 60vh;
-  margin: 20px;
-  background-color: brown;
-  /* width: 100vh; */
-  /* display: inline; */
-}
- .locationLoad{
-  background-color: cornflowerblue;
-  /* display: inline; */
-  /* position: relative; */
-  height: 100%;
-  /* width: 70vh; */
-}
-
 .maps{
-  background-color: darkmagenta;
-  height: 100%;
+  padding: 10%;
+  background-color: cornflowerblue;
+  height: 50rem ;
+  width: 50%;
 }
+.reviewArena{
+  height: 100px;
+  /* width: 10px; */
+  background-color: brown;
+}
+
 
 .main {
   margin: 20px;
-  padding: 10px;
+  /* padding: 10px; */
   height:500px;
   background-color: darkgreen;
 }
 
 .col{
-  margin: 20px;
+  padding: 0% ;
+  /* margin:5px */
+}
+.row{
+padding-right: 0px;
+}
+.arenaTitle{
+  background-color: darkolivegreen;
+  width: fit-content;
+  /* margin: auto; */
+}
+.arenaReview{
+  background-color: deeppink;
+  /* margin: auto; */
+  width: auto;
+}
+.IndividualReview{
+  background-color: dimgrey;
+  /* margin:auto; */
+
+}
+.placePhoto{
+  /* position: initial; */
+}
+.details{
+  background-color: lawngreen;
 }
