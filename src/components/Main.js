@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState } from "react"
 import Context from "../Context"
 import Maps from "./Maps"
 import ReviewArena from "./ReviewArena"
-import { Col, Row, Form, Container, Collapse } from "react-bootstrap";
+// import { Col, Row, Form, Container, Collapse } from "react-bootstrap";
 
 const App = () => {
     const [lati, setLati] = useState();
@@ -35,20 +35,9 @@ const App = () => {
                     error: error
                 }}
             >
-                {/* <Row>
-                    <Col className="maps">
-                        <Maps></Maps>
-                    </Col>
-                    <Col className="reviewArena">
-                        <ReviewArena></ReviewArena>
-                        dd
-                    </Col>
-                </Row> */}
-
-                {/* <Row> */}
                 <div className="row">
                     <div className="col col-sm-12 col-lg-8 maps">
-                        <Maps></Maps>
+                        {lati && <Maps />}
                     </div>
                     <div className="col col-sm-12 col-lg-4 reviewArena">
                         <ReviewArena></ReviewArena>

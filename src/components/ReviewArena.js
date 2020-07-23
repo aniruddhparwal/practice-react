@@ -8,6 +8,24 @@ import axios from "axios";
 
 const ReviewArena = () => {
     const { lati, lon, setError } = useContext(Context);
+    let service = new window.google.maps.places.PlacesService();
+    // service.getDetails(
+    //     { placeId: this.match.params.place_id },
+    //     // (place, status) => {
+    //     //     const latLng = String(place.geometry.location)
+    //     //         .replace(" ", "")
+    //     //         .replace("(", "")
+    //     //         .replace(")", "")
+    //     //         .split(",");
+    //     //     // console.log("latLng", latLng);
+    //     //     this.setState({
+    //     //         location: latLng,
+    //     //         place,
+    //     //         reviews: place.reviews
+    //     //     });
+    //     // }
+    // );
+
 
     const apiCall = async () => {
         // prevent refresh when form is submitted
@@ -15,7 +33,9 @@ const ReviewArena = () => {
 
 
         const API_KEY = "c648acd3649fb8a0ce09c3ff9a096d4a";
-        const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lati},${lon}&radius=1500&type=food&key=AIzaSyAlELmqkRobpn26ReMLLTirp7GHsaW8vy0`;
+        const url = `https://maps.googleapis.com/maps/api/place/details/json?location=${lati},${lon}&fields=name,rating &key=AIzaSyAlELmqkRobpn26ReMLLTirp7GHsaW8vy0`;
+
+        // const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lati},${lon}&radius=1500&type=food&key=AIzaSyAlELmqkRobpn26ReMLLTirp7GHsaW8vy0`;
         const request = axios.get(url).catch((error) => {
             // setError("Error fetching weather information");
             console.log("erre", error)
@@ -30,7 +50,7 @@ const ReviewArena = () => {
         if (response) {
             // setWeather(response.data.main);
             // setCity(response.data.name);
-            setError(null);
+            // setError(null);
         }
     };
 

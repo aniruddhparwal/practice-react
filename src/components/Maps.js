@@ -9,14 +9,7 @@ const Maps = (props) => {
         <Map google={props.google} zoom={14} initialCenter={{
             lat: lati,
             lng: lon
-
         }}
-        // style={{
-        //     // position: 'relative',
-        //     width: '100',
-        //     // margin: '%',
-        //     height: 'auto'
-        // }}
         >
             <Marker
                 title={'Your Location'}

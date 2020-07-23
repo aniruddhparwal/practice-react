@@ -3,6 +3,10 @@ body {
   background-color: blue;
 } 
 
+*{
+  box-sizing: border-box;
+}
+
 .maps{
   padding: 10%;
   background-color: cornflowerblue;
