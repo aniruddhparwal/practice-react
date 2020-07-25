@@ -70,10 +70,8 @@ const ReviewArena = () => {
                     <h1>ReviewArena</h1>
                 </div>
                 <hr></hr>
-                <div className="row arenaReview">
-                    {/* {restresult.map(name => (<p>name</p>))} */}
-                    {/* aaa */}
-                    {restresult && <IndividualReview />}
+                <div className="row arenaReview" style={{ display: "grid" }}>
+                    {restresult && restresult.map(details => (<IndividualReview icon={details.icon} name={details.name} rating={details.rating} />))}
                 </div>
             </Context.Provider>
         </div>

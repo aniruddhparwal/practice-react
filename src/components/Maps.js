@@ -3,7 +3,8 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Context from "../Context";
 
 const Maps = (props) => {
-    const { lati, lon } = useContext(Context);
+    // const { lati, lon } = useContext(Context);
+    const { lati, lon, restresult } = useContext(Context);
 
     return (
         <Map google={props.google} zoom={14} initialCenter={{
@@ -15,6 +16,15 @@ const Maps = (props) => {
                 title={'Your Location'}
                 name={'SOMA'}
                 position={{ lat: lati, lng: lon }} />
+            {/* {restresult.map(details => (
+                <Marker
+                    title={'Your Location'}
+                    name={details.name}
+                    position={{
+                        lat: { details.geometry.location.lat }, lng: { details.geometry.location.lng}
+                    }} />
+            ))} */}
+
         </Map >
     )
 }
