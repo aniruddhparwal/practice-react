@@ -35,8 +35,6 @@ const App = () => {
                     lati: lati,
                     lon: lon,
                     error: error,
-                    setRestresult: setRestresult,
-                    restresult: restresult
                 }}
             >
                 <div className="row">
