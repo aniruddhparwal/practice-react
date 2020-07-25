@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Context from "../Context"
 import Maps from "./Maps"
 import ReviewArena from "./ReviewArena"
@@ -8,6 +8,8 @@ const App = () => {
     const [lati, setLati] = useState();
     const [lon, setLon] = useState();
     const [error, setError] = useState();
+
+
 
     useEffect(() => {
         if ("geolocation" in navigator) {
@@ -32,15 +34,17 @@ const App = () => {
                 value={{
                     lati: lati,
                     lon: lon,
-                    error: error
+                    error: error,
+                    setRestresult: setRestresult,
+                    restresult: restresult
                 }}
             >
                 <div className="row">
                     <div className="col col-sm-12 col-lg-8 maps">
-                        {lati && <Maps />}
+                        {lati && lon && <Maps />}
                     </div>
                     <div className="col col-sm-12 col-lg-4 reviewArena">
-                        <ReviewArena></ReviewArena>
+                        {lati && lon && <ReviewArena />}
                     </div>
                 </div>
                 {/* </Row> */}

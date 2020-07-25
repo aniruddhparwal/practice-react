@@ -1,5 +1,5 @@
-import React, { Component, useEffect, useState, useContext } from "react"
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import React, { useEffect, useState, useContext } from "react"
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Context from "../Context";
 
 const Maps = (props) => {
