@@ -6,8 +6,8 @@ import Rating from '@material-ui/lab/Rating';
 // import { Col, Row, Form, Container } from "react-bootstrap";
 
 const IndividualReview = ({ name, icon, rating }) => {
-    const { lati, lon, restresult } = useContext(Context);
-    console.log("ddd", restresult)
+    const { lati, lon, restresult, restView } = useContext(Context);
+    console.log("ddd", restView)
 
     return (
         <div className="IndividualReview">
@@ -15,13 +15,13 @@ const IndividualReview = ({ name, icon, rating }) => {
                 <div className="col col-2">
                     <div className="placePhoto">
                         {/* <img src="https://via.placeholder.com/100" alt="Rest Pic" /> */}
-                        <img src={icon} alt="Rest Pic" />
+                        <img className="restImg" src={icon} alt="Rest Pic" />
                     </div>
                 </div>
                 <div className="col col-10 details">
                     <div className="row placeTitle">{name}</div>
                     <div className="row placeRating">
-                        <Rating name="half-rating" defaultValue={rating} precision={0.5} />
+                        <Rating name="half-rating" defaultValue={rating} precision={0.5} />{rating}
                     </div>
                 </div>
             </div>
